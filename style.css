@@ -16,9 +16,11 @@ body {
   justify-content: center; /* centreert container horizontaal */
   align-items: flex-start;
   min-height: 100vh;
+  width: 100%;
 }
 
 .container {
+  width:100%;
   display: inline-block; /* hug content breedte */
   max-width: 600px;
   padding: 1.5rem;
@@ -39,23 +41,22 @@ h2 {
 
 #players > div {
   display: flex;
+  gap: 16px; /* minimaal 16px tussen input en label */
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem; /* verticale afstand tussen regels */
   flex-wrap: nowrap;
 }
 
 input[type="text"] {
-  flex-shrink: 0;
-  max-width: 180px; /* max breedte 188px */
-  width: 100%; /* vul max 200px maar krimp mee op kleiner */
+  flex: 1 1 auto; /* laat hem flexibel meeschalen */
+  max-width: 100%;
+  min-width: 0;
   padding: 0.6rem 1rem;
   font-size: 1rem;
   border: 1px solid #ddd;
   border-radius: 6px;
   background-color: #fafafa;
   transition: border 0.2s;
-  min-width: 0;
 }
 
 input[type="text"]:focus {
@@ -75,7 +76,7 @@ input[type="text"]:focus {
   padding: 0.15rem 0.25rem;
   border-radius: 4px;
   transition: background-color 0.2s;
-  flex-shrink: 0;
+  flex-shrink: 0; /* label mag niet krimpen */
 }
 
 .present-label:hover {
@@ -92,7 +93,6 @@ input[type="checkbox"] {
 button {
   font-size: 1rem;
   padding: 0.75rem 1.25rem;
-  margin-top: 1rem;
   margin-right: 0.5rem;
   border-radius: 8px;
   cursor: pointer;
@@ -132,4 +132,11 @@ button.secondary:hover {
   font-size: 1rem;
   font-weight: 500;
   word-break: break-word;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* afstand tussen knoppen */
+  padding-top: 24px; /* ruimte boven "voeg speler toe" */
 }
