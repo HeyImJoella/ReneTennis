@@ -43,7 +43,7 @@ h2 {
   display: flex;
   gap: 16px; /* minimaal 16px tussen input en label */
   align-items: center;
-  margin-bottom: 1.5rem; /* verticale afstand tussen regels */
+  margin-bottom: 0.75rem; /* verticale afstand tussen regels */
   flex-wrap: nowrap;
 }
 
