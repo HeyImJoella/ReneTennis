@@ -22,7 +22,7 @@ function createPlayerRow(name = "", checked = true) {
   row.innerHTML = `
   <input type="text" id="name${playerCount}" value="${name}" />
   <label class="present-label">
-    Present
+    Aanwezig
     <input type="checkbox" id="check${playerCount}" ${
     checked ? "checked" : ""
   } />
