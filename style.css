@@ -1,69 +1,61 @@
+/* box-sizing voor alles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: system-ui, sans-serif;
   background-color: #f9f9f9;
   margin: 0;
-  padding: 2rem;
+  padding: 1rem;
   color: #333;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center; /* centreert container horizontaal */
+  align-items: flex-start;
+  min-height: 100vh;
 }
 
 .container {
+  display: inline-block; /* hug content breedte */
   max-width: 600px;
-  margin: auto;
+  padding: 1.5rem;
   background: #fff;
-  padding: 2.5rem;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
 }
 
 h2 {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   font-weight: 600;
   font-size: 1.5rem;
   color: #222;
   text-align: left;
+  word-break: break-word;
 }
 
 #players > div {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  gap: 8px; /* 8px ruimte tussen input en label */
+  margin-bottom: 1.5rem; /* iets meer verticale ruimte */
+  flex-wrap: nowrap; /* wil naast elkaar blijven */
 }
 
 input[type="text"] {
-  flex: 1;
-  padding: 0.6rem 1rem;
-  font-size: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  background-color: #fafafa;
-}
-
-.present-label {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.95rem;
-  color: #555;
-  cursor: pointer;
-}
-
-input[type="checkbox"] {
-  width: 22px;
-  height: 22px;
-  accent-color: #blue;
-  cursor: pointer;
-}
-
-input[type="text"] {
-  flex: 1;
+  flex-shrink: 0;
+  max-width: 200px; /* max breedte 200px */
+  width: 100%; /* vul max 200px maar krimp mee op kleiner */
   padding: 0.6rem 1rem;
   font-size: 1rem;
   border: 1px solid #ddd;
   border-radius: 6px;
   background-color: #fafafa;
   transition: border 0.2s;
+  min-width: 0;
 }
 
 input[type="text"]:focus {
@@ -72,23 +64,43 @@ input[type="text"]:focus {
   background-color: #fff;
 }
 
-label {
-  display: flex;
+.present-label {
+  display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
   font-size: 0.95rem;
   color: #555;
+  cursor: pointer;
+  user-select: none;
+  padding: 0.15rem 0.25rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  flex-shrink: 0;
+}
+
+.present-label:hover {
+  background-color: #f0f0f0;
+}
+
+input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  accent-color: #007bff;
+  cursor: pointer;
 }
 
 button {
   font-size: 1rem;
   padding: 0.75rem 1.25rem;
-  margin-top: 1.5rem;
-  margin-right: 0.75rem;
+  margin-top: 1rem;
+  margin-right: 0.5rem;
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.2s;
   border: none;
+  width: 100%;
+  max-width: 280px;
+  box-sizing: border-box;
 }
 
 button.primary {
@@ -120,4 +132,5 @@ button.secondary:hover {
   background-color: #f0f4f8;
   font-size: 1rem;
   font-weight: 500;
+  word-break: break-word;
 }

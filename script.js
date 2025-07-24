@@ -20,14 +20,14 @@ const playerContainer = document.getElementById("players");
 function createPlayerRow(name = "", checked = true) {
   const row = document.createElement("div");
   row.innerHTML = `
-  <input type="text" id="name${playerCount}" value="${name}" />
-  <label class="present-label">
-    Present
-    <input type="checkbox" id="check${playerCount}" ${
+    <input type="text" id="name${playerCount}" value="${name}" />
+    <label class="present-label" for="check${playerCount}">
+      <input type="checkbox" id="check${playerCount}" ${
     checked ? "checked" : ""
   } />
-  </label>
-`;
+      Aanwezig
+    </label>
+  `;
   playerContainer.appendChild(row);
   playerCount++;
 }
