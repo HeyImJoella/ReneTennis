@@ -17,7 +17,7 @@ let playerCount = playerNames.length;
 
 const playerContainer = document.getElementById("players");
 
-function createPlayerRow(name = "", checked = true) {
+function createPlayerRow(name = "", checked = false) {
   const row = document.createElement("div");
   row.innerHTML = `
     <input type="text" id="name${playerCount}" value="${name}" />
