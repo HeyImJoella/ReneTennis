@@ -137,6 +137,6 @@ button.secondary:hover {
 .button-group {
   display: flex;
   flex-direction: column;
-  gap: 8px; /* afstand tussen knoppen */
+  gap: 12px; /* afstand tussen knoppen */
   padding-top: 24px; /* ruimte boven "voeg speler toe" */
 }
