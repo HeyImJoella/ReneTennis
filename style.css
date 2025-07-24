@@ -40,14 +40,14 @@ h2 {
 #players > div {
   display: flex;
   align-items: center;
-  gap: 8px; /* 8px ruimte tussen input en label */
-  margin-bottom: 1.5rem; /* iets meer verticale ruimte */
-  flex-wrap: nowrap; /* wil naast elkaar blijven */
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  flex-wrap: nowrap;
 }
 
 input[type="text"] {
   flex-shrink: 0;
-  max-width: 188px; /* max breedte 188px */
+  max-width: 180px; /* max breedte 188px */
   width: 100%; /* vul max 200px maar krimp mee op kleiner */
   padding: 0.6rem 1rem;
   font-size: 1rem;
