@@ -20,7 +20,7 @@ body {
 }
 
 .container {
-  width:100%;
+  width: 100%;
   display: inline-block; /* hug content breedte */
   max-width: 600px;
   padding: 1.5rem;
@@ -43,13 +43,12 @@ h2 {
   display: flex;
   gap: 16px; /* minimaal 16px tussen input en label */
   align-items: center;
-  margin-bottom: 1rem; /* verticale afstand tussen regels */
+  margin-bottom: 1.5rem; /* verticale afstand tussen regels */
   flex-wrap: nowrap;
 }
 
 input[type="text"] {
-  flex: 1 1 auto; /* laat hem flexibel meeschalen */
-  max-width: 100%;
+  flex: 1 1 auto; /* laat flexibel meeschalen */
   min-width: 0;
   padding: 0.6rem 1rem;
   font-size: 1rem;
@@ -138,5 +137,5 @@ button.secondary:hover {
   display: flex;
   flex-direction: column;
   gap: 12px; /* afstand tussen knoppen */
-  padding-top: 24px; /* ruimte boven "voeg speler toe" */
+  padding-top: 24px; /* ruimte boven knoppen */
 }
