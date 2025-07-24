@@ -47,7 +47,7 @@ h2 {
 
 input[type="text"] {
   flex-shrink: 0;
-  max-width: 200px; /* max breedte 200px */
+  max-width: 188px; /* max breedte 188px */
   width: 100%; /* vul max 200px maar krimp mee op kleiner */
   padding: 0.6rem 1rem;
   font-size: 1rem;
@@ -99,7 +99,6 @@ button {
   transition: background 0.2s;
   border: none;
   width: 100%;
-  max-width: 280px;
   box-sizing: border-box;
 }
 
