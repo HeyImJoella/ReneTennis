@@ -1,11 +1,11 @@
 const playerNames = [
-  "René B",
-  "René M",
   "Eric",
   "Frank",
   "Frans",
   "Hans",
   "Jan",
+  "René B",
+  "René M",
   "Robert",
   "Ruud",
   "Sjaak",
