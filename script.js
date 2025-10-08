@@ -72,4 +72,11 @@ generateTeamsBtn.addEventListener("click", () => {
       teamsOutput.innerHTML += `<div class="team">🚨 Odd one out: ${activePlayers[i]}</div>`;
     }
   }
+
+  // Show team container
+  const teamcontainer = document.getElementById("teams-container");
+  if(activePlayers.length > 0) {
+    teamcontainer.classList.add('show');
+    teamcontainer.scrollIntoView({ behavior: "smooth"});
+  }
 });
